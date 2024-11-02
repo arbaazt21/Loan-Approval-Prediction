@@ -2,6 +2,7 @@
 
 ### Overview
 This project aims to predict the loan status of applicants using various machine learning algorithms. By analyzing historical data, the project provides a predictive model that determines whether a loan will be approved or not. This can help financial institutions streamline their loan approval processes and manage risk more effectively.
+The web application for this project is deployed on [Render](https://loan-approval-prediction-hdgf.onrender.com), providing an accessible interface for users to interact with the model and get real-time predictions on loan statuses.
 
 ### Table of Contents
 - Introduction
