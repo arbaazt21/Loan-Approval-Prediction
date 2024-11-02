@@ -32,4 +32,4 @@ Loan status prediction is a crucial task for financial institutions. Accurate pr
 - Random Forest:- An ensemble method that uses multiple decision trees to improve accuracy and control over-fitting.
 
 ## Deployment
-The web application for this project is deployed on [Render]([https://render.com/](https://loan-approval-prediction-hdgf.onrender.com)), providing an accessible interface for users to interact with the model and get real-time predictions on loan statuses.
+The web application for this project is deployed on [Render](https://loan-approval-prediction-hdgf.onrender.com), providing an accessible interface for users to interact with the model and get real-time predictions on loan statuses.
