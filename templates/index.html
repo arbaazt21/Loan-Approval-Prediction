@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-container label {
+            margin: 10px 0 5px;
+            display: block;
+            font-weight: bold;
+        }
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 1.5em;
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Loan Approval Prediction</h2>
+        <form action="/predict" method="post">
+
+            <label for="Gender">Gender:</label>
+            <select name="Gender" required>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <label for="Married">Married:</label>
+            <select name="Married" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="Dependents">Dependents:</label>
+            <select name="Dependents" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+            </select>
+
+            <label for="Education">Education:</label>
+            <select name="Education" required>
+                <option value="1">Graduate</option>
+                <option value="0">Not Graduate</option>
+            </select>
+
+            <label for="Self_Employed">Self Employed:</label>
+            <select name="Self_Employed" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="ApplicantIncome">Applicant Income:</label>
+            <input type="number" name="ApplicantIncome" required>
+
+            <label for="CoapplicantIncome">Coapplicant Income:</label>
+            <input type="number" name="CoapplicantIncome" required>
+
+            <label for="LoanAmount">Loan Amount:</label>
+            <input type="number" name="LoanAmount" required>
+
+            <label for="Loan_Amount_Term">Loan Amount Term:</label>
+            <input type="number" name="Loan_Amount_Term" required>
+
+            <label for="Credit_History">Credit History:</label>
+            <select name="Credit_History" required>
+                <option value="1">1</option>
+                <option value="0">0</option>
+            </select>
+
+            <label for="Property_Area">Property Area:</label>
+            <select name="Property_Area" required>
+                <option value="2">Urban</option>
+                <option value="1">Semiurban</option>
+                <option value="0">Rural</option>
+            </select>
+
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
